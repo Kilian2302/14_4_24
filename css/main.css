@@ -2,13 +2,17 @@
     padding:0px;
     margin: 0px;
 }
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
 a{
     text-decoration: none;
 }
 a:hover {
     text-decoration: dashed white;
     color:#0d6edf;
-    /* background:white; */
+
 }
 .card img{
     border: 3px solid gold;
@@ -29,6 +33,22 @@ header {
 main{
     margin-top: 100px;
 }
+.btn-group a::before{
+    content: '';
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 0;
+    height:2px;
+    background: #fff;
+    transition: 0.3s;
+}
+.btn-group a:hover::before{
+    width: 100%;
+}
+.button-log-sign:hover {
+    transform: scale(1.1);
+}
 @media screen and (min-width:1024px) {
     .logo {
         margin:0px 150px;
@@ -38,7 +58,7 @@ main{
         height: 300px;
     }
 }
-@media screen and (max-width:1023px) {
+@media screen and (max-width:1533px) {
     .logo {
         margin: 0px 100px;
     }
@@ -50,6 +70,25 @@ main{
     .card{
         margin: 0px auto;
     }
+    .nav{ 
+        flex-direction: column;
+        gap:20px !important;
+        width: 100%;
+    }
+    .nav li{
+        margin-left: 0;
+    }
+    .nav .nav-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left:0px !important;
+    }
+   .nav-item a{ 
+    width: 300px;
+   }
 }
 @media screen and (max-width:767px) {
     .logo{
